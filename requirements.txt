@@ -2,3 +2,4 @@ pandas==1.3.0
 joblib==1.1.0
 requests==2.26.0
 streamlit==0.84.0
+Pillow==8.3.2
