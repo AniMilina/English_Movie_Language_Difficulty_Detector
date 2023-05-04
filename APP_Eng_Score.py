@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[24]:
+# Install necessary packages
 !pip install --upgrade pip
 !pip install -r requirements.txt
 !pip uninstall click
