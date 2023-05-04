@@ -33,7 +33,7 @@ except:
 
 # функция для получения информации о фильме из API
 def get_movie_info(movie_name: str) -> Dict:
-    payload = {'api_key': 'YOUR_API_KEY', 'query': movie_name}
+    payload = {'api_key': 'c831eb220940792881b5d28c4e3ea02a', 'query': movie_name}
     r = requests.get(MOVIES_DATA_URL, params=payload)
     if r.status_code == 200:
         data = r.json()['results'][0]
