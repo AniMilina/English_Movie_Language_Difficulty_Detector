@@ -22,28 +22,18 @@ from PIL import Image
 # In[25]:
 
 
-MODEL_PATH = 'C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score_all_files/V_2/best_model.pkl'
+MODEL_URL = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/best_model.pkl'
 MOVIES_DATA_URL = 'https://api.themoviedb.org/3/search/movie'
 
-
-# In[26]:
-
-
 # загрузка модели
-
 try:
-    model = joblib.load(MODEL_PATH)
+    model = joblib.load(MODEL_URL)
 except:
     st.write('Error loading the model file.')
 
-
-# In[27]:
-
-
 # функция для получения информации о фильме из API
-
 def get_movie_info(movie_name: str) -> Dict:
-    payload = {'api_key': 'API_KEY', 'query': movie_name}
+    payload = {'api_key': 'YOUR_API_KEY', 'query': movie_name}
     r = requests.get(MOVIES_DATA_URL, params=payload)
     if r.status_code == 200:
         data = r.json()['results'][0]
