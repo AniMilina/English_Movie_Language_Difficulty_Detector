@@ -72,7 +72,7 @@ st.set_page_config(page_title='English Movie Language Difficulty Detector', page
 # загружаем картинку в качестве обложки
 
 from PIL import Image
-cover_image = Image.open("C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score_all_files/V_2/eng_cover.jpg")
+cover_image = Image.open("https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/eng_cover.jpg")
 st.image(cover_image, use_column_width=True)
 
 
