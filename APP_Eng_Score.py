@@ -2,10 +2,10 @@
 # coding: utf-8
 
 # Install necessary packages
-!pip install --upgrade pip
-!pip install -r requirements.txt
-!pip uninstall click
-!pip install click==7.1.2 
+pip install --upgrade pip
+pip install -r requirements.txt
+pip uninstall click
+pip install click==7.1.2 
 
 import pandas as pd
 import joblib
