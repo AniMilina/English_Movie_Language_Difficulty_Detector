@@ -66,7 +66,7 @@ def predict_level(movie_name: str) -> str:
 
 # устанавливаем заголовок и обложку приложения
 
-st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto', menu_items=None)
+st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
 
 # In[30]:
