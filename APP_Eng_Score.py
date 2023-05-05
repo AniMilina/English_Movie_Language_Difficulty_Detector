@@ -34,76 +34,27 @@ try:
 except:
     st.write('Error loading the model file.')
 
-# функция для получения информации о фильме из API
-def get_movie_info(movie_name: str) -> Dict:
-    payload = {'api_key': 'c831eb220940792881b5d28c4e3ea02a', 'query': movie_name}
-    r = requests.get(MOVIES_DATA_URL, params=payload)
-    if r.status_code == 200:
-        data = r.json()['results'][0]
-        movie_info = {'title': data['original_title'], 'overview': data['overview'], 'release_date': data['release_date']}
-        return movie_info
-    else:
-        st.write('Error getting movie data from the API.')
-
-
-# In[28]:
-
-
-# функция для определения уровня сложности английского языка в фильме
-
-def predict_level(movie_name: str) -> str:
-    try:
-        movie_info = get_movie_info(movie_name)
-        # здесь можно использовать дополнительные признаки, такие как жанр фильма, сложность диалогов и т.д.
-        level = model.predict([movie_info['overview']])[0]
-        return level
-    except:
-        st.write('Error predicting the level.')
-
-
-# In[29]:
-
 
 # устанавливаем заголовок и обложку приложения
-
 st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
 
-# In[30]:
-
-
 # загружаем картинку в качестве обложки
-
 from PIL import Image
 cover_image = Image.open("https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/eng_cover.jpg")
 st.image(cover_image, use_column_width=True)
 
 
-# In[31]:
-
-
 # задаем заголовок приложения
-
 st.title('English Movie Language Difficulty Detector')
 
 
-# In[32]:
-
-
 # пояснительный текст
-
 st.write('This application will help English learners to determine the level of a movie by subtitles. Just enter the name of a movie and the incredibly cool artificial intelligence will do it.')
 
 
-# In[33]:
-
-
 # форма для ввода названия фильма
-
 movie_name = st.text_input('Enter the name of a movie')
-
-
-# In[34]:
 
 
 if movie_name:
@@ -127,7 +78,6 @@ if movie_name:
         st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
 else:
     st.write('Please enter a movie name.')
-
 
 # In[ ]:
 
