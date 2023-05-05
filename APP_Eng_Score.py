@@ -15,7 +15,7 @@ import pickle
 import requests
 from io import StringIO
 from typing import List, Dict
-
+from io import BytesIO
 
 # устанавливаем заголовок и обложку приложения
 
@@ -37,8 +37,9 @@ except:
 
 
 # загружаем картинку в качестве обложки
-from PIL import Image
-cover_image = Image.open("https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/eng_cover.jpg")
+
+response = requests.get("https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/eng_cover.jpg")
+cover_image = Image.open(BytesIO(response.content))
 st.image(cover_image, use_column_width=True)
 
 
