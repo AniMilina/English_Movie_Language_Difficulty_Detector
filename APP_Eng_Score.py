@@ -55,7 +55,6 @@ st.write('This application will help English learners to determine the level of 
 # форма для ввода названия фильма
 movie_name = st.text_input('Enter the name of a movie')
 
-
 if movie_name:
     # проверяем, есть ли информация о фильме в нашем списке
     movie_info = movies_df[movies_df['Movie'] == movie_name].iloc[0]
@@ -65,20 +64,20 @@ if movie_name:
         # получаем уровень сложности английского языка
         level = predict_level(movie_name)
         # отображаем уровень с использованием разных цветов шрифта
-   if level == 'A1':
-       color = 'green'
-   elif level == 'A2':
-       color = 'orange'
-   elif level == 'B1':
-       color = 'red'
-   elif level == 'B2':
-       color = 'purple'
-   elif level == 'C1':
-       color = 'blue'
-   elif level == 'C2':
-       color = 'black'
-else:
-    color = 'gray'
+        if level == 'A1':
+            color = 'green'
+        elif level == 'A2':
+            color = 'orange'
+        elif level == 'B1':
+            color = 'red'
+        elif level == 'B2':
+            color = 'purple'
+        elif level == 'C1':
+            color = 'blue'
+        elif level == 'C2':
+            color = 'black'
+        else:
+            color = 'gray'
         st.subheader(f'Level of your movie: ')
         st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
 else:
