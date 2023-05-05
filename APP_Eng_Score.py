@@ -59,32 +59,32 @@ movie_name = st.text_input('Enter the name of a movie')
 if movie_name:
     # проверяем, есть ли информация о фильме в нашем списке
     movie_info = movies_df[movies_df['Movie'] == movie_name]
-if len(movie_info) == 0:
-    st.write('Sorry, we do not have subtitles for this movie. Please try another one.')
-else:
-    if movie_info.empty:
+    if len(movie_info) == 0:
         st.write('Sorry, we do not have subtitles for this movie. Please try another one.')
     else:
-        movie_info = movie_info.iloc[0]
-        # получаем уровень сложности английского языка
-        level = predict_level(movie_name)
-        # отображаем уровень с использованием разных цветов шрифта
-        if level == 'A1':
-            color = 'green'
-        elif level == 'A2':
-            color = 'orange'
-        elif level == 'B1':
-            color = 'red'
-        elif level == 'B2':
-            color = 'purple'
-        elif level == 'C1':
-            color = 'blue'
-        elif level == 'C2':
-            color = 'black'
+        if movie_info.empty:
+            st.write('Sorry, we do not have subtitles for this movie. Please try another one.')
         else:
-            color = 'black'
-        st.subheader(f'Level of your movie: ')
-        st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
+            movie_info = movie_info.iloc[0]
+            # получаем уровень сложности английского языка
+            level = predict_level(movie_name)
+            # отображаем уровень с использованием разных цветов шрифта
+            if level == 'A1':
+                color = 'green'
+            elif level == 'A2':
+                color = 'orange'
+            elif level == 'B1':
+                color = 'red'
+            elif level == 'B2':
+                color = 'purple'
+            elif level == 'C1':
+                color = 'blue'
+            elif level == 'C2':
+                color = 'black'
+            else:
+                color = 'black'
+            st.subheader(f'Level of your movie: ')
+            st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
 else:
     st.write('Please enter a movie name.')
 # In[ ]:
