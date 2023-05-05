@@ -7,19 +7,19 @@
 # pip uninstall click
 # pip install click==7.1.2 
 
+import streamlit as st
+from PIL import Image
 import pandas as pd
 import joblib
 import pickle
 import requests
-
 from io import StringIO
 from typing import List, Dict
 
-import streamlit as st
 
-import requests
-import io
-from PIL import Image
+# устанавливаем заголовок и обложку приложения
+
+st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
 
 # In[25]:
@@ -34,9 +34,6 @@ try:
 except:
     st.write('Error loading the model file.')
 
-
-# устанавливаем заголовок и обложку приложения
-st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
 
 # загружаем картинку в качестве обложки
