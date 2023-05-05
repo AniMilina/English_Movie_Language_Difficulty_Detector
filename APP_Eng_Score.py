@@ -30,7 +30,7 @@ MODEL_PATH = 'C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score
 # загрузка модели
 try:
     with open(MODEL_PATH, 'rb') as f:
-        model = pickle.load(f)
+        model = joblib.load(MODEL_PATH)
 except:
     st.write('Error loading the model file.')
 
