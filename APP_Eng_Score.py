@@ -78,7 +78,6 @@ if movie_name:
         st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
 else:
     st.write('Please enter a movie name.')
-
 # In[ ]:
 
 
