@@ -58,7 +58,11 @@ movie_name = st.text_input('Enter the name of a movie')
 
 if movie_name:
     # проверяем, есть ли информация о фильме в нашем списке
-    movie_info = movies_df[movies_df['Movie'] == movie_name].iloc[0]
+    movie_info = movies_df[movies_df['Movie'] == movie_name]
+    if len(movie_info) == 0:
+        st.write('Sorry, we do not have subtitles for this movie. Please try another one.')
+    else:
+        movie_info = movie_info.iloc[0]
     if not movie_info:
         st.write('Sorry, we do not have subtitles for this movie. Please try another one.')
     else:
