@@ -27,6 +27,7 @@ st.set_page_config(page_title='English Movie Language Difficulty Detector', page
 
 MODEL_URL = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/best_model.pkl'
 MOVIES_DATA_URL = 'https://api.themoviedb.org/3/search/movie'
+movies_df = pd.read_csv("https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/EDA_movies_subtitles.csv")
 
 # загрузка модели
 try:
