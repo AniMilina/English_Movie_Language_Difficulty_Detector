@@ -47,19 +47,19 @@ if movie_name:
         # получаем уровень сложности английского языка
         level = model.predict(movie_info['Subtitle'])
         # отображаем уровень с использованием разных цветов шрифта
-            if level == 'A1':
-        color = 'green'
-    elif level == 'A2':
-        color = 'orange'
-    elif level == 'B1':
-        color = 'red'
-    elif level == 'B2':
-        color = 'purple'
-    elif level == 'C1':
-        color = 'blue'
-    elif level == 'C2':
-        color = 'black'
-    else:
-        color = 'gray'
-    st.subheader(f'Level of your movie: ')
-    st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
+        if level == 'A1':
+            color = 'green'
+        elif level == 'A2':
+            color = 'orange'
+        elif level == 'B1':
+            color = 'red'
+        elif level == 'B2':
+            color = 'purple'
+        elif level == 'C1':
+            color = 'blue'
+        elif level == 'C2':
+            color = 'black'
+        else:
+            color = 'gray'
+        st.subheader(f'Level of your movie: ')
+        st.subheader(f'{level}',  style=f'color:{color};font-size:30px')
