@@ -9,7 +9,7 @@ from io import BytesIO
 # Заголовок и обложку приложения
 st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
-MODEL_FILE = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/best_model.pkl'
+MODEL_FILE = './best_model.pkl'.
 MOVIES_DATA_URL = 'https://api.themoviedb.org/3/search/movie'
 SUBTITLES_DATA_URL = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/EDA_movies_subtitles.csv'
 #MODEL_PATH = 'C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score_all_files/V_2/best_model.pkl'
