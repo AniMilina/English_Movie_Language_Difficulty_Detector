@@ -16,8 +16,8 @@ SUBTITLES_DATA_URL = 'https://github.com/AniMilina/English_Movie_Language_Diffic
 
 # Загрузка модели
 try:
-    with open(MODEL_PATH, 'rb') as f:
-        model = joblib.load(MODEL_PATH)
+    with open(MODEL_FILE, 'rb') as f:
+        model = joblib.load(MODEL_FILE)
 except:
     st.write('Error loading the model file.')
 
