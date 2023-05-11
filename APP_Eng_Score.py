@@ -22,15 +22,15 @@ from io import BytesIO
 st.set_page_config(page_title='English Movie Language Difficulty Detector', page_icon=':clapper:', layout='wide', initial_sidebar_state='auto')
 
 
-MODEL_FILE = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/best_model.pkl'
+MODEL_FILE = './best_model.pkl'.
 MOVIES_DATA_URL = 'https://api.themoviedb.org/3/search/movie'
 movies_df = 'https://github.com/AniMilina/English_Movie_Language_Difficulty_Detector/raw/main/EDA_movies_subtitles.csv'
-MODEL_PATH = 'C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score_all_files/V_2/best_model.pkl'
+#MODEL_PATH = 'C:/Users/Admin/Desktop/DS studies/Data/English_score/English_score_all_files/V_2/best_model.pkl'
 
 # загрузка модели
 try:
-    with open(MODEL_PATH, 'rb') as f:
-        model = joblib.load(MODEL_PATH)
+    with open(MODEL_FILE, 'rb') as f:
+        model = joblib.load(MODEL_FILE)
 except:
     st.write('Error loading the model file.')
 
