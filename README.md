@@ -12,4 +12,5 @@ This web application allows you to determine the difficulty level of English lan
 
 ## Streamlit APP
 
-https://animilina-english-movie-language-difficult-app-eng-score-3pn0ek.streamlit.app/
+* https://animilina-english-movie-language-difficult-app-eng-score-3pn0ek.streamlit.app/  
+* https://animilina-english-movie-language-difficu-app-eng-score-2-2n0nk8.streamlit.app/
